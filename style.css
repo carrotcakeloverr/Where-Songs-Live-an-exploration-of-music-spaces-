@@ -1,0 +1,158 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.background-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+
+    background-image: url('Images/planets.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    width: 100%;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav-right {
+    display: flex;
+    gap: 15px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.index-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  margin: 0;
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle-quote {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+.quote-container {
+    max-width: 620px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote-text {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    letter-spacing: 0.2px;
+}
+
+.quote-author {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+}
+
+.glass-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 24px;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    
+  
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    
+  
+    box-shadow: 
+        0 0 20px rgba(160, 80, 255, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+        
+    transition: all 0.3s ease;
+}
+
+
+.cta-btn {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 14px;
+}
+
+
+.glass-btn:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 
+        0 0 30px rgba(180, 100, 255, 0.6),
+        inset 0 1px 2px rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 80vh;
+  box-sizing: border-box;
+}
+
+.index-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
