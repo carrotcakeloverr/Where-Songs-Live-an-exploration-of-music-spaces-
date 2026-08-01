@@ -1,0 +1,796 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Body Styles (Homepage default) */
+body {
+  background-image: 
+    linear-gradient(rgba(4, 6, 7, 0.5), rgba(4, 6, 7, 0.5)), 
+    url('../Images/soundwaves.jpg');
+  
+  background-color: #040607;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* --- HOMEPAGE CIRCLE GRID STYLES --- */
+
+.circle-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; 
+  max-width: 1400px;
+  width: 100%;
+  align-items: center;
+}
+
+.grid-row {
+  display: flex;
+  justify-content: center;
+  gap: 100px; 
+  width: 100%;
+}
+
+/* Base Circle Style */
+.space-circle {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  overflow: hidden; 
+  
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.circle-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8); 
+  transition: transform 0.4s ease;
+}
+
+.space-title {
+  position: relative;
+  z-index: 2;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0 15px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.space-circle:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.space-circle:hover .circle-img {
+  transform: scale(1.1);
+}
+
+
+/* --- CONTENT PAGES LAYOUT (Physical, Digital, etc.) --- */
+
+
+body.content-page {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 30px 50px;
+}
+
+
+.top-nav {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 0 50px !important; /* Insets the whole bar from the screen edges */
+  box-sizing: border-box !important;
+}
+
+.nav-right {
+  display: flex !important;
+  gap: 15px !important;
+}
+
+
+.glass-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 24px;
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    
+  
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    
+  
+    box-shadow: 
+        0 0 20px rgba(160, 80, 255, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+        
+    transition: all 0.3s ease;
+}
+
+
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  max-width: 650px;
+  margin: 40px 0;
+  gap: 40px;
+}
+
+.text-block {
+  text-align: left;
+}
+
+.page-heading {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  color: #FFFFFF;
+}
+
+.page-text {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #E2DEFC;
+  margin-bottom: 20px;
+  letter-spacing: 0.2px;
+}
+
+
+.explore-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 60px;
+  padding-right: 20px; 
+}
+
+.explore-btn {
+  padding: 12px 28px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+
+body.physical-page {
+  background-image: 
+    linear-gradient(rgba(4, 6, 7, 0.4), rgba(4, 6, 7, 0.4)), 
+    url('../Images/bedroom\ layout.jpg'); 
+  
+  background-color: #040607;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 30px 50px;
+  min-height: 100vh;
+  color: #FFFFFF;
+}
+
+
+.content-card {
+  background: rgba(4, 6, 7, 0.45); 
+  backdrop-filter: blur(14px); 
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15); 
+  border-radius: 20px; 
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  max-width: 620px;
+}
+
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin: 40px 0;
+}
+
+/* Unique Body Style for Digital Page */
+body.digital-page {
+  background-image: 
+    linear-gradient(rgba(4, 6, 7, 0.4), rgba(4, 6, 7, 0.4)), 
+    url('../Images/music\ studio\ .jpg'); /* Change filename to your digital background image */
+  
+  background-color: #040607;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+/* Container to place text card and button side-by-side in the middle */
+.middle-layout-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0;
+}
+
+/* Wrapper for centering the button vertically relative to the text box */
+.middle-explore-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Unique Body Style for Emotional Page */
+body.emotional-page {
+  background-image: 
+    linear-gradient(rgba(4, 6, 7, 0.4), rgba(4, 6, 7, 0.4)), 
+    url('../Images/emotionalbackground.jpg'); /* Replace with your emotional background image filename */
+  
+  background-color: #040607;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+/* Places text container on the upper-left */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  max-width: 620px;
+  margin-top: 40px;
+}
+
+/* Glassy Card Container for Text */
+.content-card {
+  background: rgba(4, 6, 7, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Pins Explore Button to Bottom Right */
+.explore-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 40px;
+  padding-right: 20px;
+}
+
+/* Unique Body Style for this Page */
+body.cultural-bottom-page {
+  background-image: 
+    linear-gradient(rgba(4, 6, 7, 0.4), rgba(4, 6, 7, 0.4)), 
+    url('../Images/cultural.jpg'); 
+  
+  background-color: #040607;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+/* Uses CSS Grid to lock the layout into two distinct columns */
+.right-layout-container {
+  display: grid;
+  grid-template-columns: 1fr auto; /* Column 1 fills middle space, Column 2 hugs card */
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto auto;
+  padding: 0 50px;
+}
+
+/* Places the explore button nicely in that left/middle column */
+.middle-buttons-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Forces your text card to sit cleanly on the right column */
+.right-layout-container .content-card {
+  justify-self: end; /* Snaps the card to the far right */
+}
+
+This is the new one 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: 
+    linear-gradient(rgba(4, 6, 7, 0.5), rgba(4, 6, 7, 0.5)), 
+    url('../Images/soundwaves.jpg');
+  background-color: #040607;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* ==========================================
+   2. HOMEPAGE CIRCLE GRID STYLES
+   ========================================== */
+.circle-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; 
+  max-width: 1400px;
+  width: 100%;
+  align-items: center;
+}
+
+.grid-row {
+  display: flex;
+  justify-content: center;
+  gap: 100px; 
+  width: 100%;
+}
+
+.space-circle {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  overflow: hidden; 
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.circle-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8); 
+  transition: transform 0.4s ease;
+}
+
+.space-title {
+  position: relative;
+  z-index: 2;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0 15px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.space-circle:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.space-circle:hover .circle-img {
+  transform: scale(1.1);
+}
+
+/* ==========================================
+   3. UNIVERSAL TOP NAVIGATION & BUTTONS
+   ========================================== */
+.top-nav {
+  position: relative !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 0 60px !important;
+  box-sizing: border-box !important;
+  z-index: 1000 !important;
+}
+
+.nav-right {
+  display: flex !important;
+  gap: 15px !important;
+}
+
+.glass-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 0 20px rgba(160, 80, 255, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* ==========================================
+   4. MASTER LAYOUT FOR ALL SUBPAGES (.explore-page)
+   ========================================== */
+body.explore-page {
+  background-color: #040607;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 0px;
+  box-sizing: border-box;
+}
+
+/* Circle Badge Styling for Subpages */
+body.explore-page .circle-badge {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+body.explore-page .circle-badge:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+body.explore-page .circle-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: none;
+}
+
+/* Title Overlay on Subpage Circles */
+body.explore-page .circle-title-overlay {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.45) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  padding: 15px !important;
+  box-sizing: border-box !important;
+  transition: background 0.3s ease;
+}
+
+body.explore-page .circle-badge:hover .circle-title-overlay {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Row & Card Layout */
+body.explore-page .explore-row-container {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: 30px !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 40px 20px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+body.explore-page .column-card-group {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 40px !important;
+  width: 100% !important;
+}
+
+body.explore-page .content-card {
+  display: none;
+  flex: 1;
+  background: rgba(20, 20, 30, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+}
+
+body.explore-page .column-card-group:hover .content-card,
+body.explore-page .column-card-group.active .content-card {
+  display: block;
+}
+
+body.explore-page .page-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+#future-page-bg .future-title-container {
+  position: absolute;
+  top: 140px;
+  left: 60px; /* Positions it on the left side */
+  text-align: left; /* Aligns text to the left */
+  z-index: 10;
+  max-width: 400px;
+}
+
+#future-page-bg .main-page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 15px rgba(160, 80, 255, 0.4);
+}
+
+#future-page-bg .main-page-subtitle {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.5px;
+}
+
+
+#digital-page-bg .explore-row-container {
+  margin-left: 350px !important;
+}
+
+#physical-page-bg {
+  background-image: linear-gradient(rgba(4, 6, 7, 0.3), rgba(4, 6, 7, 0.3)), url('../Images/recordstore.jpg');
+}
+
+#digital-page-bg {
+  background-image: linear-gradient(rgba(4, 6, 7, 0.3), rgba(4, 6, 7, 0.3)), url('../Images/audiowaveform.jpeg');
+}
+
+#emotional-page-bg {
+  background-image: linear-gradient(rgba(4, 6, 7, 0.3), rgba(4, 6, 7, 0.3)), url('../Images/stickerwall.jpg');
+}
+#cultural-page-bg {
+  background-image: linear-gradient(rgba(4, 6, 7, 0.3), rgba(4, 6, 7, 0.3)), url('../Images/rug.jpg');
+}
+
+#future-page-bg {
+  background-image: linear-gradient(rgba(4, 6, 7, 0.3), rgba(4, 6, 7, 0.3)), url('../Images/futuristic.jpg');
+}
+
+#gallery-page-bg {
+  background-color: #040607;
+  background-image: 
+    linear-gradient(rgba(4, 6, 7, 0.5), rgba(4, 6, 7, 0.5)), 
+    url('../Images/soundwaves.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 0 0 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#gallery-page-bg * {
+  box-sizing: border-box;
+}
+
+/* Gallery Container */
+#gallery-page-bg .gallery-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 40px;
+  flex: 1;
+}
+
+#gallery-page-bg .gallery-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+#gallery-page-bg .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Gallery Cards */
+#gallery-page-bg .gallery-item {
+  position: relative;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#gallery-page-bg .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+#gallery-page-bg .gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(160, 80, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+#gallery-page-bg .gallery-item:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.6);
+}
+
+/* Caption Overlay (Controlled via JS) */
+#gallery-page-bg .caption-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 6, 7, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Footer */
+#gallery-page-bg .site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: rgba(4, 6, 7, 0.8);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 40px;
+}
